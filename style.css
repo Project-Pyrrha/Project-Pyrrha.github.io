@@ -11,8 +11,8 @@ html, body {
 
 /* Custom Text Selection Color (White background, Black text) */
 ::selection {
-    background: #ffffff;
-    color: #000000;
+    background: #dc2626;
+    color: #ffffff;
 }
 
 /* CUSTOM SCROLLBAR */
@@ -26,7 +26,7 @@ html, body {
     background: #333;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #dc2626;
 }
 
 /* UTILITIES */
@@ -43,4 +43,44 @@ html, body {
 /* Overrides Tailwind's default soft fade with your hard blink */
 .animate-pulse {
     animation: blink 1.5s infinite;
+}
+
+/* FIRE EFFECT */
+#ui {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -125px; /* -$fireSize / 4 */
+    z-index: 0; /* Changed from -1 to 0 to be visible above body bg */
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.fire {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: #dc2626; /* Red Flame */
+    filter: blur(20px) contrast(30);
+    border: 250px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 40%;
+    box-sizing: border-box;
+    transform: scale(0.4, 1);
+}
+
+.burn {
+    position: absolute;
+    top: 500px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 100%;
+}
+
+@keyframes burning {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-600px); }
 }

@@ -17,6 +17,8 @@
                         terminal: '#cccccc',
                         dim: '#666666',
                         border: '#171717',
+                        red: '#dc2626',
+                        darkred: '#450a0a',
                     },
                     fontFamily: {
                         mono: ['Courier New', 'Courier', 'monospace'], 
@@ -30,15 +32,19 @@
 </head>
 <body class="bg-black text-terminal font-mono antialiased min-h-screen overflow-x-hidden">
 
-    <div class="max-w-4xl mx-auto px-6 py-12">
+    <div id="ui">
+        <div class="fire"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 py-12 relative z-10">
 
         <header class="mb-16 border-b border-border pb-8 flex flex-col md:flex-row justify-between items-start md:items-end">
             <div>
-                <h1 class="text-4xl font-bold tracking-tighter text-white mb-2">Pyrrha <span id="version-header">1.2</span></h1>
+                <h1 class="text-4xl font-bold tracking-tighter text-red mb-2">Pyrrha <span id="version-header" class="text-white">1.2</span></h1>
                 <p class="text-dim text-sm">Advanced Lua script for GTA:SA <span id="codename-display" class="ml-2 text-xs border border-dim rounded px-1 opacity-70 hidden"></span></p>
             </div>
             <div class="mt-4 md:mt-0">
-                 <a href="https://github.com/Project-Pyrrha/Pyrrha/archive/refs/heads/main.zip" class="bg-white text-black px-4 py-2 font-bold text-sm hover:bg-terminal transition-colors">DOWNLOAD</a>
+                 <a href="https://github.com/Project-Pyrrha/Pyrrha/archive/refs/heads/main.zip" class="bg-white text-black px-4 py-2 font-bold text-sm hover:bg-red hover:text-white transition-colors">DOWNLOAD</a>
             </div>
         </header>
 
@@ -46,14 +52,14 @@
             <p class="text-terminal leading-relaxed max-w-2xl text-lg">
                 A comprehensive utility and cheat menu for MoonLoader. 
                 <br>
-                Featuring <span class="text-white border-b border-dim border-dotted">visuals</span>, <span class="text-white border-b border-dim border-dotted">vehicle control</span>, and <span class="text-white border-b border-dim border-dotted">combat enhancements</span>.
+                Featuring <span class="text-white border-b border-red border-dotted">visuals</span>, <span class="text-white border-b border-red border-dotted">vehicle control</span>, and <span class="text-white border-b border-red border-dotted">combat enhancements</span>.
             </p>
         </section>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
 
             <div>
-                <h2 class="text-white text-xs font-bold mb-6 border-l-2 border-white pl-3 uppercase tracking-widest">
+                <h2 class="text-red text-xs font-bold mb-6 border-l-2 border-red pl-3 uppercase tracking-widest">
                     Weapon & Visuals
                 </h2>
                 <div class="space-y-8">
@@ -80,7 +86,7 @@
             </div>
 
             <div>
-                <h2 class="text-white text-xs font-bold mb-6 border-l-2 border-dim pl-3 uppercase tracking-widest">
+                <h2 class="text-red text-xs font-bold mb-6 border-l-2 border-darkred pl-3 uppercase tracking-widest">
                     Vehicle & Misc
                 </h2>
                 <ul class="space-y-4 text-sm text-terminal">
@@ -111,7 +117,7 @@
 
         <section class="mb-16">
             <h2 class="text-lg font-bold text-white mb-6 flex items-center">
-                <span class="text-dim mr-2">./</span>REQUIREMENTS
+                <span class="text-red mr-2">./</span>REQUIREMENTS
             </h2>
             <div class="flex flex-wrap gap-2 text-xs text-terminal uppercase font-bold">
                 <span class="border border-border bg-offblack px-3 py-1.5 hover:text-white transition-colors cursor-default">MoonLoader 0.26+</span>
@@ -123,7 +129,7 @@
 
         <section class="mb-16">
             <h2 class="text-lg font-bold text-white mb-8 flex items-center">
-                <span class="text-dim mr-2">./</span>INSTALLATION
+                <span class="text-red mr-2">./</span>INSTALLATION
             </h2>
 
             <div class="grid grid-cols-1 gap-6">
@@ -144,7 +150,7 @@
 
         <section class="mb-16">
             <h2 class="text-lg font-bold text-white mb-8 flex items-center">
-                <span class="text-dim mr-2">./</span>DEFAULT KEYBINDS
+                <span class="text-red mr-2">./</span>DEFAULT KEYBINDS
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -174,7 +180,7 @@
             </div>
         </section>
 
-        <section class="mb-16 border border-dim border-dashed p-8 text-center">
+        <section class="mb-16 border border-darkred border-dashed p-8 text-center">
             <h2 class="text-white font-bold text-lg mb-2">SCREENSHOTS</h2>
             <p class="text-dim text-sm italic">
                 ( Awaiting content... I'm too lazy to post them right now. )
@@ -183,7 +189,7 @@
 
         <section class="pt-8 border-t border-border">
             <div class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-mono justify-center md:justify-start">
-                <a href="#" class="text-dim hover:text-white transition-colors">
+                <a href="#" class="text-dim hover:text-red transition-colors">
                     Author: <span class="text-white">rmux</span>
                 </a>
                 <span class="text-dim">Version: <span class="text-white" id="version-footer">1.2</span></span>
