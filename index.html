@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyrrha</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#000000', 
+                        offblack: '#0a0a0a',
+                        terminal: '#cccccc',
+                        dim: '#666666',
+                        border: '#171717',
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', 'Courier', 'monospace'], 
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-terminal font-mono antialiased min-h-screen overflow-x-hidden">
+
+    <div class="max-w-4xl mx-auto px-6 py-12">
+
+        <header class="mb-16 border-b border-border pb-8 flex flex-col md:flex-row justify-between items-start md:items-end">
+            <div>
+                <h1 class="text-4xl font-bold tracking-tighter text-white mb-2">Pyrrha <span id="version-header">1.2</span></h1>
+                <p class="text-dim text-sm">Advanced Lua script for GTA:SA <span id="codename-display" class="ml-2 text-xs border border-dim rounded px-1 opacity-70 hidden"></span></p>
+            </div>
+            <div class="mt-4 md:mt-0">
+                 <a href="https://github.com/Project-Pyrrha/Pyrrha/archive/refs/heads/main.zip" class="bg-white text-black px-4 py-2 font-bold text-sm hover:bg-terminal transition-colors">DOWNLOAD</a>
+            </div>
+        </header>
+
+        <section class="mb-16">
+            <p class="text-terminal leading-relaxed max-w-2xl text-lg">
+                A comprehensive utility and cheat menu for MoonLoader. 
+                <br>
+                Featuring <span class="text-white border-b border-dim border-dotted">visuals</span>, <span class="text-white border-b border-dim border-dotted">vehicle control</span>, and <span class="text-white border-b border-dim border-dotted">combat enhancements</span>.
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+
+            <div>
+                <h2 class="text-white text-xs font-bold mb-6 border-l-2 border-white pl-3 uppercase tracking-widest">
+                    Weapon & Visuals
+                </h2>
+                <div class="space-y-8">
+                    <div class="group">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="text-white font-bold text-lg">Combat</span>
+                        </div>
+                        <div class="text-xs text-terminal pl-3 border-l border-border ml-1">
+                            <div class="mb-1">Silent Aimbot (FOV/Walls), NoSpread, NoReload</div>
+                            <div class="text-dim">Instant Crosshair, Hitsounds</div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <span class="text-white font-bold text-lg">ESP</span>
+                        </div>
+                        <div class="text-xs text-terminal pl-3 border-l border-border ml-1">
+                            <div class="mb-1">Box (Full/Corner), Skeleton, Snap Lines, Head Dot</div>
+                            <div class="text-dim">Info Tags, Health/Armor Bars, Info Bar (FPS/Ping)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-white text-xs font-bold mb-6 border-l-2 border-dim pl-3 uppercase tracking-widest">
+                    Vehicle & Misc
+                </h2>
+                <ul class="space-y-4 text-sm text-terminal">
+                    <li class="flex justify-between items-center border-b border-border pb-2">
+                        <span>Vehicle Manager</span>
+                        <div class="text-right">
+                            <span class="block text-white">Speed Control, Drift Mode</span>
+                            <span class="text-xs text-dim">Handling (Perfect/Tank/Stick), WaterDrive, FireCar, AntiBoom, GM Car/Wheels, Gear Limit</span>
+                        </div>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-border pb-2">
+                        <span>Player Cheats</span>
+                        <div class="text-right">
+                            <span class="block text-white">GodMode, AntiStun</span>
+                            <span class="text-xs text-dim">NoFall, NoBike Fall, Infinite Oxygen, Mega Jump (Ped/BMX), QuickStop</span>
+                        </div>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-border pb-2">
+                        <span>Network</span>
+                        <div class="text-right">
+                            <span class="block text-white">FakeAFK</span>
+                            <span class="text-xs text-dim">FakeLag, Reconnect System</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-lg font-bold text-white mb-6 flex items-center">
+                <span class="text-dim mr-2">./</span>REQUIREMENTS
+            </h2>
+            <div class="flex flex-wrap gap-2 text-xs text-terminal uppercase font-bold">
+                <span class="border border-border bg-offblack px-3 py-1.5 hover:text-white transition-colors cursor-default">MoonLoader 0.26+</span>
+                <span class="border border-border bg-offblack px-3 py-1.5 hover:text-white transition-colors cursor-default">SAMP.lua</span>
+                <span class="border border-border bg-offblack px-3 py-1.5 hover:text-white transition-colors cursor-default">imgui</span>
+                <span class="border border-border bg-offblack px-3 py-1.5 hover:text-white transition-colors cursor-default">vkeys</span>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-lg font-bold text-white mb-8 flex items-center">
+                <span class="text-dim mr-2">./</span>INSTALLATION
+            </h2>
+
+            <div class="grid grid-cols-1 gap-6">
+                <div class="block border border-border bg-offblack p-6 hover:border-dim transition group">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-white font-bold text-lg">Setup Guide</h3>
+                        <span class="text-[10px] border border-border rounded px-2 py-1 text-dim tracking-wider">LUA</span>
+                    </div>
+                    <ol class="text-sm text-terminal mb-4 leading-relaxed list-decimal list-inside space-y-2">
+                        <li>Download the script.</li>
+                        <li>Place <code class="bg-black px-1">Pyrrha.lua</code> into your GTA San Andreas <code class="bg-black px-1">moonloader</code> folder.</li>
+                        <li>(Optional) Ensure <code class="bg-black px-1">moonloader/resource/pyrrha/tick.mp3</code> exists for hitsounds.</li>
+                        <li>Launch the game.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-lg font-bold text-white mb-8 flex items-center">
+                <span class="text-dim mr-2">./</span>DEFAULT KEYBINDS
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="block border border-border bg-offblack p-6 hover:border-dim transition group">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-white font-bold text-lg">General</h3>
+                    </div>
+                    <ul class="text-sm text-terminal space-y-2 font-mono">
+                        <li class="flex justify-between border-b border-border pb-1"><span>Toggle Menu</span> <span class="text-white">U</span></li>
+                        <li class="flex justify-between border-b border-border pb-1"><span>Reconnect</span> <span class="text-white">LShift + 0</span></li>
+                        <li class="flex justify-between border-b border-border pb-1"><span>AntiStun</span> <span class="text-white">F3</span></li>
+                        <li class="flex justify-between border-b border-border pb-1"><span>GodMode</span> <span class="text-white">F9</span></li>
+                    </ul>
+                </div>
+
+                <div class="block border border-border bg-offblack p-6 hover:border-dim transition group">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-white font-bold text-lg">Visuals & Vehicle</h3>
+                    </div>
+                    <ul class="text-sm text-terminal space-y-2 font-mono">
+                        <li class="flex justify-between border-b border-border pb-1"><span>Toggle ESP</span> <span class="text-white">F4</span></li>
+                        <li class="flex justify-between border-b border-border pb-1"><span>Toggle ESP Lines</span> <span class="text-white">F5</span></li>
+                        <li class="flex justify-between border-b border-border pb-1"><span>Drift</span> <span class="text-white">LShift</span></li>
+                        <li class="flex justify-between border-b border-border pb-1"><span>Speed Boost</span> <span class="text-white">LCtrl</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 border border-dim border-dashed p-8 text-center">
+            <h2 class="text-white font-bold text-lg mb-2">SCREENSHOTS</h2>
+            <p class="text-dim text-sm italic">
+                ( Awaiting content... I'm too lazy to post them right now. )
+            </p>
+        </section>
+
+        <section class="pt-8 border-t border-border">
+            <div class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-mono justify-center md:justify-start">
+                <a href="#" class="text-dim hover:text-white transition-colors">
+                    Author: <span class="text-white">rmux</span>
+                </a>
+                <span class="text-dim">Version: <span class="text-white" id="version-footer">1.2</span></span>
+                <span class="text-dim">Updated: <span class="text-white" id="date-footer">...</span></span>
+            </div>
+        </section>
+
+        <footer class="text-center text-[10px] text-dim py-12 flex flex-col items-center gap-2">
+            <span>PYRRHA</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://x.xkq.workers.dev/track/UgaAlEubQqLX" async></script>
+</body>
+</html>
