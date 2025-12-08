@@ -180,11 +180,24 @@
             </div>
         </section>
 
-        <section class="mb-16 border border-darkred border-dashed p-8 text-center">
-            <h2 class="text-white font-bold text-lg mb-2">SCREENSHOTS</h2>
-            <p class="text-dim text-sm italic">
-                ( Awaiting content... I'm too lazy to post them right now. )
-            </p>
+        <section class="mb-16 border border-darkred border-dashed p-8 text-center relative">
+            <h2 class="text-white font-bold text-lg mb-6">SCREENSHOTS</h2>
+            
+            <!-- Gallery Container -->
+            <div id="gallery-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 no-scrollbar scroll-smooth items-center cursor-grab">
+                <img src="images/1.jpg" alt="Pyrrha Screenshot 1" class="snap-center w-full md:w-[85%] flex-shrink-0 border border-border hover:border-red transition-colors">
+                <img src="images/2.jpg" alt="Pyrrha Screenshot 2" class="snap-center w-full md:w-[85%] flex-shrink-0 border border-border hover:border-red transition-colors">
+                <img src="images/3.jpg" alt="Pyrrha Screenshot 3" class="snap-center w-full md:w-[85%] flex-shrink-0 border border-border hover:border-red transition-colors">
+                <img src="images/4.jpg" alt="Pyrrha Screenshot 4" class="snap-center w-full md:w-[85%] flex-shrink-0 border border-border hover:border-red transition-colors">
+                <img src="images/5.jpg" alt="Pyrrha Screenshot 5" class="snap-center w-full md:w-[85%] flex-shrink-0 border border-border hover:border-red transition-colors">
+                <img src="images/6.jpg" alt="Pyrrha Screenshot 6" class="snap-center w-full md:w-[85%] flex-shrink-0 border border-border hover:border-red transition-colors">
+                <img src="images/7.jpg" alt="Pyrrha Screenshot 7" class="snap-center w-full md:w-[85%] flex-shrink-0 border border-border hover:border-red transition-colors">
+            </div>
+
+            <!-- Indicators -->
+            <div id="gallery-indicators" class="flex justify-center gap-3 mt-2">
+                <!-- Injected by JS -->
+            </div>
         </section>
 
         <section class="pt-8 border-t border-border">
